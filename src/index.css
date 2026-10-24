@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a1a3f;
+  --color-navy-deep: #060f26;
+  --color-navy-night: #030816;
+  --color-gold: #d4af37;
+  --color-gold-soft: #f0d77a;
+  --color-offwhite: #f5f1e8;
+}
+
+
+ :root {
+  --font-title: "Aref Ruqaa", "Amiri", serif;
+  --font-body: "Amiri", serif;
+
+
+  /* غيّر الخلفية من هنا فقط */
+  --bg-center: #071433;
+  --bg-edge: #000000;
+}
+
+html[dir="ltr"] {
+  --font-title: "Cinzel Decorative", serif;
+  --font-body: "Cormorant Garamond", serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(
+    ellipse at center,
+    var(--bg-center) 0%,
+    var(--bg-edge) 100%
+  );
+  background-attachment: fixed;
+  color: var(--color-offwhite);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
