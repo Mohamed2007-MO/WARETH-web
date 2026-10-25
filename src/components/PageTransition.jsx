@@ -8,7 +8,6 @@ export default function PageTransition() {
   const [gate, setGate] = useState(false);
   const first = useRef(true);
 
-  // نشغّل البوابة مع كل تغيير مسار (ما عدا أول فتح للموقع)
   useEffect(() => {
     if (first.current) {
       first.current = false;
@@ -17,7 +16,6 @@ export default function PageTransition() {
     setGate(true);
   }, [location.pathname]);
 
-  // التأخير بس لما البوابة شغالة
   const delay = gate ? GATE_DURATION * 0.72 : 0;
 
   return (

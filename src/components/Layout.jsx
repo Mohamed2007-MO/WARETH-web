@@ -1,15 +1,13 @@
-import { Outlet } from "react-router-dom";
 import Menu from "./Menu";
 import Logo from "./Logo";
+import PageTransition from "./PageTransition";
 
 export default function Layout() {
   return (
-   <div className="relative min-h-dvh text-offwhite">
+    <div className="relative min-h-dvh overflow-x-hidden text-offwhite">
       <Logo />
       <Menu />
-      <main>
-        <Outlet />
-      </main>
+      <PageTransition />
     </div>
   );
 }
